@@ -453,7 +453,7 @@ export default function SeatingChart() {
               return (
                 <div
                   key={`${side}-${rowIndex}-${colIndex}`}
-                  className={`w-16 h-16 border-2 rounded-lg flex items-center justify-center text-xs font-medium transition-colors relative ${
+                  className={`w-[22vw] h-[22vw] sm:w-14 sm:h-14 md:w-16 md:h-16 border-2 rounded-lg flex items-center justify-center text-xs font-medium transition-colors relative ${
                     seat?.student === "closed"
                       ? "bg-red-100 border-red-300 text-red-600"
                       : typeof seat?.student === "string"
@@ -542,7 +542,7 @@ export default function SeatingChart() {
               </div>
 
               {/* 좌석 배치 */}
-              <div className="flex justify-between items-start gap-8">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-8">
                 {/* 좌측 */}
                 <div className="flex-1">
                   <h3 className="text-center font-semibold mb-4 text-gray-700">
@@ -552,12 +552,12 @@ export default function SeatingChart() {
                 </div>
 
                 {/* 중앙 통로 */}
-                <div className="w-8 flex items-center justify-center">
-                  <div className="w-1 h-32 bg-gray-300 rounded"></div>
+                <div className="w-full md:w-8 flex items-center justify-center my-4 md:my-0">
+                  <div className="w-32 h-1 md:w-1 md:h-32 bg-gray-300 rounded"></div>
                 </div>
 
                 {/* 우측 */}
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3 className="text-center font-semibold mb-4 text-gray-700">
                     우측
                   </h3>
